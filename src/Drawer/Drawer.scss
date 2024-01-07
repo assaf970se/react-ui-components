@@ -1,0 +1,39 @@
+:root {
+    --drawer-height: calc(100dvh - 140px);
+    --drawer-bottom-position: calc(140px - 100dvh);
+}
+
+.drawer {
+    height: var(--drawer-height);
+    position: absolute;
+    left: 0;
+    bottom: var(--drawer-bottom-position);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: white;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+
+    &.open {
+        &.full {
+            transform: translateY(calc(0px - var(--drawer-height)));
+        }
+
+        &.partial {
+            transform: translateY(calc(0px - calc(var(--drawer-height) /2)));
+        }
+    }
+}
+.drawer-header{
+    height: 40px;
+    width: 100%;
+    background-color: yellow;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.drawer-body{}
