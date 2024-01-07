@@ -7,10 +7,12 @@ interface DrawerProps {
 }
 export const Drawer = ({isDrawerOpen, handleDrawerToggle}: DrawerProps) => {
     const [drawerHeight, setDrawerHeight] = React.useState('partial');
+    // const drawerInputRef = React.useRef<HTMLInputElement>(null);
 
     useEffect(() => {
         if(isDrawerOpen) {
             setDrawerHeight('partial');
+            // drawerInputRef.current?.focus();
         }
     }, [isDrawerOpen]);
 
@@ -30,6 +32,7 @@ export const Drawer = ({isDrawerOpen, handleDrawerToggle}: DrawerProps) => {
             </div>
             <div className="drawer-body">
                 <p>Drawer Body</p>
+                <input type="text" value=""/>
             </div>
         </div>
     )
