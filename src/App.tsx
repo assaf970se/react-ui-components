@@ -26,6 +26,7 @@ function App() {
         >
           Learn React
         </a>
+          <input type="text"/>
       </div>
         <Drawer
             isDrawerOpen={isDrawerOpen}
