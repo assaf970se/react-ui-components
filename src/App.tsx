@@ -13,21 +13,28 @@ function App() {
       <header className="app-header">
         <p onClick={handleDrawerToggle}>APP Header</p>
       </header>
-      <div className="App-body">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        <div
+            style={{
+                height: 'calc(100% - 40px)',
+                position: 'absolute',
+                width: '100%',
+                top: '40px',
+                left: '0',
+                // transform: `scale(${scaleFactor})`,
+                // transformOrigin: 'top',
+            }}
         >
-          Learn React
-        </a>
-          <input type="text"/>
-      </div>
+            <iframe
+                src="https://assafse1.wixsite.com/16-bittttts"
+                style={{pointerEvents: "none", width: "100%", height: "100%"}}
+                // id="preview"
+                // allowFullScreen="true"
+                // style={{top: "107px", left: "60px", width: "1041px", height: "698px", zIndex: 0, pointerEvents: "none"}}
+            >
+            </iframe>
+
+            {/*<div style={{height: '100%', width: '100%', backgroundColor: 'red'}}></div>*/}
+        </div>
         <Drawer
             isDrawerOpen={isDrawerOpen}
             handleDrawerToggle={handleDrawerToggle}
