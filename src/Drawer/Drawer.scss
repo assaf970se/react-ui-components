@@ -1,10 +1,7 @@
 
 .drawer {
-  //height: var(--drawer-height);
-  //position: absolute;
-  //left: 0;
-  //bottom: var(--drawer-bottom-position);
-  //z-index: 100;
+  --drawer-header-height: 60px;
+
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   background-color: white;
@@ -13,7 +10,7 @@
 }
 
 .drawer-header {
-  height: 40px;
+  height: var(--drawer-header-height);
   width: 100%;
   background-color: yellow;
   border-top-left-radius: 10px;
@@ -26,4 +23,8 @@
 }
 
 .drawer-body {
+  height: calc(100% - var(--drawer-header-height));
+  overflow: auto;
+  padding-right: 24px;
+  padding-left: 24px;
 }

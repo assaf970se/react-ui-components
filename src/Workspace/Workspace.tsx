@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./Workspace.scss";
-import { PreviewFrame } from "../PreviewFrame/PreviewFrame";
+import { Stage } from "../PreviewFrame/Stage";
 import { Drawer } from "../Drawer/Drawer";
 
 interface WorkspaceProps {
   isDrawerOpen: boolean;
   handleDrawerToggle: () => void;
-}
-
-interface WorkspaceState {
-  drawerState: "closed" | "open" | "partial";
 }
 
 export const Workspace = ({
@@ -36,10 +32,10 @@ export const Workspace = ({
       if (drawerState === "partial") {
         return "50%";
       } else if (drawerState === "full") {
-        return "100%";
+        return "calc(100% - 20px)";
       }
     } else {
-      return "0px";
+      return "0%";
     }
   };
 
@@ -51,7 +47,7 @@ export const Workspace = ({
       if (drawerState === "partial") {
         return "50%";
       } else if (drawerState === "full") {
-        return "0px";
+        return "20px";
       }
     } else {
       return "100%";
@@ -59,11 +55,11 @@ export const Workspace = ({
   };
 
   const drawerHeight = calcDrawerHeight(isDrawerOpen, drawerState);
-  const previewFrameHeight = calcPreviewFrameHeight(isDrawerOpen, drawerState);
+  const StageHeight = calcPreviewFrameHeight(isDrawerOpen, drawerState);
 
   return (
     <div className="workspace">
-      <PreviewFrame height={previewFrameHeight} />
+      <Stage height={StageHeight} />
       <Drawer
         height={drawerHeight}
         handleDrawerHeight={handleDrawerHeight}
