@@ -1,13 +1,8 @@
-:root {
-  --drawer-height: calc(100dvh - 50px);
-  --drawer-bottom-position: calc(50px - 100dvh);
-}
-
 body {
   position: relative;
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 100dvh;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./Workspace.scss";
 import { PreviewFrame } from "../PreviewFrame/PreviewFrame";
 import { Drawer } from "../Drawer/Drawer";
 
